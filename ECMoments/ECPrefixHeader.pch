@@ -1,0 +1,20 @@
+//
+//  ECPrefixHeader.pch
+//  ECMoments
+//
+//  Created by HSBC_XiAn_Core on 8/31/17.
+//  Copyright © 2017 EricCao. All rights reserved.
+//
+
+#ifndef ECPrefixHeader_pch
+#define ECPrefixHeader_pch
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "YYModel.h"
+#import "ECMacro.h"
+#import "UIView+FrameHelper.h"
+#import "ProgressHUD.h"
+
+#endif /* ECPrefixHeader_pch */
