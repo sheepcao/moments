@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		65397D071F5856DA008C2A1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D061F5856DA008C2A1D /* main.m */; };
 		65397D0A1F5856DA008C2A1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D091F5856DA008C2A1D /* AppDelegate.m */; };
-		65397D0D1F5856DA008C2A1D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D0C1F5856DA008C2A1D /* ViewController.m */; };
 		65397D101F5856DA008C2A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65397D0E1F5856DA008C2A1D /* Main.storyboard */; };
 		65397D121F5856DA008C2A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65397D111F5856DA008C2A1D /* Assets.xcassets */; };
 		65397D151F5856DA008C2A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65397D131F5856DA008C2A1D /* LaunchScreen.storyboard */; };
 		65397D201F5856DA008C2A1D /* ECMomentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D1F1F5856DA008C2A1D /* ECMomentsTests.m */; };
+		65397D6B1F585E6B008C2A1D /* ECMomentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D6A1F585E6B008C2A1D /* ECMomentsViewController.m */; };
 		B0C204AB54C0413A4433051E /* libPods-ECMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */; };
 		C442FA9DCF0C53289630013F /* libPods-ECMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B0AA2D551349806C69A17 /* libPods-ECMoments.a */; };
 /* End PBXBuildFile section */
@@ -35,8 +35,6 @@
 		65397D061F5856DA008C2A1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65397D081F5856DA008C2A1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65397D091F5856DA008C2A1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65397D0B1F5856DA008C2A1D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		65397D0C1F5856DA008C2A1D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		65397D0F1F5856DA008C2A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65397D111F5856DA008C2A1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65397D141F5856DA008C2A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		65397D1B1F5856DA008C2A1D /* ECMomentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECMomentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65397D1F1F5856DA008C2A1D /* ECMomentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECMomentsTests.m; sourceTree = "<group>"; };
 		65397D211F5856DA008C2A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65397D691F585E6B008C2A1D /* ECMomentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMomentsViewController.h; sourceTree = "<group>"; };
+		65397D6A1F585E6B008C2A1D /* ECMomentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMomentsViewController.m; sourceTree = "<group>"; };
 		6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884FF6AF85CF6DD0FA52B7D3 /* Pods-ECMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECMomentsTests/Pods-ECMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9E82D7AB66C0C033764915 /* Pods-ECMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECMoments/Pods-ECMoments.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,10 +104,11 @@
 		65397D041F5856DA008C2A1D /* ECMoments */ = {
 			isa = PBXGroup;
 			children = (
+				65397D2A1F585AF7008C2A1D /* CommonUtil */,
+				65397D411F585CF0008C2A1D /* Moments */,
+				65397D4B1F585CF0008C2A1D /* tweekCell */,
 				65397D081F5856DA008C2A1D /* AppDelegate.h */,
 				65397D091F5856DA008C2A1D /* AppDelegate.m */,
-				65397D0B1F5856DA008C2A1D /* ViewController.h */,
-				65397D0C1F5856DA008C2A1D /* ViewController.m */,
 				65397D0E1F5856DA008C2A1D /* Main.storyboard */,
 				65397D111F5856DA008C2A1D /* Assets.xcassets */,
 				65397D131F5856DA008C2A1D /* LaunchScreen.storyboard */,
@@ -132,6 +133,109 @@
 				65397D211F5856DA008C2A1D /* Info.plist */,
 			);
 			path = ECMomentsTests;
+			sourceTree = "<group>";
+		};
+		65397D2A1F585AF7008C2A1D /* CommonUtil */ = {
+			isa = PBXGroup;
+			children = (
+				65397D2B1F585AF7008C2A1D /* JSONHelper */,
+				65397D2E1F585AF7008C2A1D /* NetworkingManager */,
+				65397D311F585AF7008C2A1D /* Tools */,
+				65397D331F585AF7008C2A1D /* UI */,
+			);
+			path = CommonUtil;
+			sourceTree = "<group>";
+		};
+		65397D2B1F585AF7008C2A1D /* JSONHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSONHelper;
+			sourceTree = "<group>";
+		};
+		65397D2E1F585AF7008C2A1D /* NetworkingManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingManager;
+			sourceTree = "<group>";
+		};
+		65397D311F585AF7008C2A1D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		65397D331F585AF7008C2A1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		65397D411F585CF0008C2A1D /* Moments */ = {
+			isa = PBXGroup;
+			children = (
+				65397D421F585CF0008C2A1D /* Model */,
+				65397D431F585CF0008C2A1D /* View */,
+				65397D481F585CF0008C2A1D /* ViewModel */,
+			);
+			path = Moments;
+			sourceTree = "<group>";
+		};
+		65397D421F585CF0008C2A1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65397D431F585CF0008C2A1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65397D691F585E6B008C2A1D /* ECMomentsViewController.h */,
+				65397D6A1F585E6B008C2A1D /* ECMomentsViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		65397D481F585CF0008C2A1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		65397D4B1F585CF0008C2A1D /* tweekCell */ = {
+			isa = PBXGroup;
+			children = (
+				65397D4C1F585CF0008C2A1D /* Model */,
+				65397D571F585CF0008C2A1D /* View */,
+				65397D5B1F585CF0008C2A1D /* ViewModel */,
+			);
+			path = tweekCell;
+			sourceTree = "<group>";
+		};
+		65397D4C1F585CF0008C2A1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65397D571F585CF0008C2A1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		65397D5B1F585CF0008C2A1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		95407647EBF1E362F5E0AC5F /* Frameworks */ = {
@@ -344,9 +448,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65397D0D1F5856DA008C2A1D /* ViewController.m in Sources */,
 				65397D0A1F5856DA008C2A1D /* AppDelegate.m in Sources */,
 				65397D071F5856DA008C2A1D /* main.m in Sources */,
+				65397D6B1F585E6B008C2A1D /* ECMomentsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
