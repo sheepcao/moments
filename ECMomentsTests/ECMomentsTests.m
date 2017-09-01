@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "MomentsAPIClient.h"
 #import "Tweet.h"
+#import "JSONHelper.h"
 
 @interface ECMomentsTests : XCTestCase
 
@@ -26,7 +27,7 @@
     [super tearDown];
 }
 
-- (void)testDownloadData {
+- (void)testFetchData {
     XCTestExpectation *expectation = [self expectationWithDescription:@"Handler called"];
     
     [[MomentsAPIClient sharedClient] dataGET:@"/user/jsmith/tweets" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, NSString *JSON) {
@@ -34,12 +35,23 @@
         NSLog(@"json is : %@",JSON);
         XCTAssertNotNil(JSON,@"response data error");
         
+        //parse start
+        NSArray *array = [JSONHelper parseJSONArray:JSON ToModel:[Tweet class]];
+        NSLog(@"array is : %@",array);
+        XCTAssertGreaterThanOrEqual(array.count,22,@"array should be more that 22 elements");
+        Tweet *tw = array[0];
+        TweetImage *twImage = tw.images[0];
+        XCTAssertNotNil(twImage.url,@"image url error");
+        //end
+        
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         XCTAssertNotNil(error,@"network error");
         
     }];
     [self waitForExpectationsWithTimeout:15.0 handler:nil];
 }
+
 
 
 
