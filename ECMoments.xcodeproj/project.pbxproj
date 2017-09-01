@@ -16,6 +16,8 @@
 		65397D6B1F585E6B008C2A1D /* ECMomentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D6A1F585E6B008C2A1D /* ECMomentsViewController.m */; };
 		65397D731F586147008C2A1D /* ECNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D721F586147008C2A1D /* ECNavController.m */; };
 		65397D7A1F5862CD008C2A1D /* UIView+FrameHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D791F5862CD008C2A1D /* UIView+FrameHelper.m */; };
+		65397D7F1F5907D3008C2A1D /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D7E1F5907D3008C2A1D /* Tweet.m */; };
+		65397D821F590AED008C2A1D /* MomentsAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397D811F590AED008C2A1D /* MomentsAPIClient.m */; };
 		B0C204AB54C0413A4433051E /* libPods-ECMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */; };
 		C442FA9DCF0C53289630013F /* libPods-ECMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B0AA2D551349806C69A17 /* libPods-ECMoments.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,10 @@
 		65397D751F5861A8008C2A1D /* ECPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPrefixHeader.pch; sourceTree = "<group>"; };
 		65397D781F5862CD008C2A1D /* UIView+FrameHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameHelper.h"; sourceTree = "<group>"; };
 		65397D791F5862CD008C2A1D /* UIView+FrameHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameHelper.m"; sourceTree = "<group>"; };
+		65397D7D1F5907D3008C2A1D /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		65397D7E1F5907D3008C2A1D /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		65397D801F590AED008C2A1D /* MomentsAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentsAPIClient.h; sourceTree = "<group>"; };
+		65397D811F590AED008C2A1D /* MomentsAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentsAPIClient.m; sourceTree = "<group>"; };
 		6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884FF6AF85CF6DD0FA52B7D3 /* Pods-ECMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECMomentsTests/Pods-ECMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9E82D7AB66C0C033764915 /* Pods-ECMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECMoments/Pods-ECMoments.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +171,8 @@
 		65397D2E1F585AF7008C2A1D /* NetworkingManager */ = {
 			isa = PBXGroup;
 			children = (
+				65397D801F590AED008C2A1D /* MomentsAPIClient.h */,
+				65397D811F590AED008C2A1D /* MomentsAPIClient.m */,
 			);
 			path = NetworkingManager;
 			sourceTree = "<group>";
@@ -233,6 +241,8 @@
 		65397D4C1F585CF0008C2A1D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				65397D7D1F5907D3008C2A1D /* Tweet.h */,
+				65397D7E1F5907D3008C2A1D /* Tweet.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -488,7 +498,9 @@
 			files = (
 				65397D7A1F5862CD008C2A1D /* UIView+FrameHelper.m in Sources */,
 				65397D731F586147008C2A1D /* ECNavController.m in Sources */,
+				65397D821F590AED008C2A1D /* MomentsAPIClient.m in Sources */,
 				65397D0A1F5856DA008C2A1D /* AppDelegate.m in Sources */,
+				65397D7F1F5907D3008C2A1D /* Tweet.m in Sources */,
 				65397D071F5856DA008C2A1D /* main.m in Sources */,
 				65397D6B1F585E6B008C2A1D /* ECMomentsViewController.m in Sources */,
 			);

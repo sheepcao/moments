@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "MomentsAPIClient.h"
+#import "Tweet.h"
 
 @interface ECMomentsTests : XCTestCase
 
@@ -24,10 +26,22 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testDownloadData {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Handler called"];
+    
+    [[MomentsAPIClient sharedClient] dataGET:@"/user/jsmith/tweets" parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, NSString *JSON) {
+        [expectation fulfill];
+        NSLog(@"json is : %@",JSON);
+        XCTAssertNotNil(JSON,@"response data error");
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        XCTAssertNotNil(error,@"network error");
+        
+    }];
+    [self waitForExpectationsWithTimeout:15.0 handler:nil];
 }
+
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
