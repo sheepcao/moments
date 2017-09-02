@@ -63,7 +63,7 @@
     self.profileImageView.height = self.width / ratio;
     
     self.profileImageView.x = 0;
-    self.profileImageView.y = MIN(0, self.height - self.profileImageView.height - 20);
+    self.profileImageView.y = MIN(0, self.height - self.profileImageView.height);
     
     
     [self addSubview:self.profileImageView];
@@ -83,7 +83,7 @@
     
     
     self.avatarView.x = self.width - 100;
-    self.avatarView.y = self.height - 70;
+    self.avatarView.y = self.height - 50;
     self.avatarView.width = 70;
     self.avatarView.height = 70;
     
@@ -103,7 +103,7 @@
     self.nameLabel.width = 200;
     self.nameLabel.height = 20;
     self.nameLabel.x = self.width - self.nameLabel.width - 110;
-    self.nameLabel.y = self.height - 20 - 20 - 6;
+    self.nameLabel.y = self.height - 20 - 6;
     
     [self addSubview:self.nameLabel];
     
@@ -129,10 +129,10 @@
     self.nameLabel.width = 200;
     self.nameLabel.height = 20;
     self.nameLabel.x = self.width - self.nameLabel.width - 110;
-    self.nameLabel.y = self.height - 20 - 20 - 6;
+    self.nameLabel.y = self.height - 20 - 6;
     
     self.avatarView.x = self.width - 100;
-    self.avatarView.y = self.height - 70;
+    self.avatarView.y = self.height - 50;
     self.avatarView.width = 70;
     self.avatarView.height = 70;
 
@@ -141,7 +141,7 @@
     self.profileImageView.height = self.width / ratio;
     
     self.profileImageView.x = 0;
-    self.profileImageView.y = MIN(0, self.height - self.profileImageView.height - 20);
+    self.profileImageView.y = MIN(0, self.height - self.profileImageView.height );
 
     
     
