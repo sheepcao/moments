@@ -8,7 +8,8 @@
 
 #import "ECMomentsViewController.h"
 
-@interface ECMomentsViewController ()
+@interface ECMomentsViewController ()<UITableViewDelegate,UITableViewDataSource>
+
 
 @end
 

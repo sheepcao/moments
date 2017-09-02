@@ -10,6 +10,7 @@
 
 @interface ECMomentsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @end
 
