@@ -7,7 +7,7 @@ target 'ECMoments' do
 
   pod 'AFNetworking', '~> 3.0'
   pod 'YYModel'
-  pod 'ProgressHUD'
+  pod 'MJRefresh'
 
 end
 
@@ -17,6 +17,6 @@ target 'ECMomentsTests' do
 
   pod 'AFNetworking', '~> 3.0'
   pod 'YYModel'
-  pod 'ProgressHUD'
+  pod 'MJRefresh'
 
 end

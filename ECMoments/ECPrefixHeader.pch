@@ -15,6 +15,5 @@
 #import "YYModel.h"
 #import "ECMacro.h"
 #import "UIView+FrameHelper.h"
-#import "ProgressHUD.h"
 
 #endif /* ECPrefixHeader_pch */

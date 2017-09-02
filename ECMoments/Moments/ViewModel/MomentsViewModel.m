@@ -101,8 +101,9 @@ static NSString * const userServicePathString = @"/user/jsmith";
         }];
     }else
     {
-        [NSThread sleepForTimeInterval:1200]; // simulate the network...
         self.tweetsToShow = [NSArray arrayWithArray:[self insertObjToShowWithCount:count]];
+        block(nil);
+
     }
 }
 

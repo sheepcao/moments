@@ -32,17 +32,19 @@ const int photoMargin = 3;
 
 -(void)updateContent:(TweetViewModel *)viewModel;
 {
-
-    if (viewModel.picNamesArray.count < 1) {
-        return ;
-    }
-    
-    [self setFrame:viewModel.photoContainerViewFrame];
     for (UIView *imageView in self.subviews) {
         if ([imageView isKindOfClass:[ECImageView class]]) {
             [imageView removeFromSuperview];
         }
     }
+    [self setFrame:viewModel.photoContainerViewFrame];
+
+
+    if (viewModel.picNamesArray.count < 1) {
+        return ;
+    }
+    
+
     for (int i = 0; i < viewModel.picNamesArray.count; i++) {
         ECImageView *imageView = [[ECImageView alloc] init];
         

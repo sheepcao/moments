@@ -9,17 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ECMoments.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-ECMomentsTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>097F4BC81854609459C485FB771EAF06</key>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>15BF9F2D5830C74E542D8B928F82E378</key>
+		<key>5B086B6A8427ED89F125D0C0BBD0CF6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>47AD09544CBE9907A6D42711298BFF76</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>90F68DA2502A22141DCAE3EADBD5810B</key>
+		<key>9AD26655F574B8CE25B957A26DC53621</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED47DCCA2BF06374DA612C174033F42B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

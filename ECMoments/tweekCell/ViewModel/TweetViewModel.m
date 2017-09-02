@@ -125,7 +125,6 @@ const CGFloat margin = 8;
     CGFloat photoContainerLabelWidth = _contentLabelFrame.size.width;
     CGFloat photoContainerLabelHeight = 0;
     
-    _photoContainerViewFrame = CGRectZero;
     NSInteger count = self.picNamesArray.count;
     
     if (count > 0) {
@@ -140,8 +139,9 @@ const CGFloat margin = 8;
             self.photoWidth = (photoContainerLabelWidth - photoMargin * 4)/3;
         }
         photoContainerLabelHeight = (self.photoWidth + photoMargin)*((count - 1)/3 + 1) + 4 * photoMargin;
-        _photoContainerViewFrame = CGRectMake(photoContainerLabelX, photoContainerLabelY, photoContainerLabelWidth, photoContainerLabelHeight);
     }
+    _photoContainerViewFrame = CGRectMake(photoContainerLabelX, photoContainerLabelY, photoContainerLabelWidth, photoContainerLabelHeight);
+
     
     return _photoContainerViewFrame;
     
@@ -153,8 +153,6 @@ const CGFloat margin = 8;
     CGFloat commentsViewLabelY = CGRectGetMaxY(_photoContainerViewFrame) + margin * 0.5;
     CGFloat commentsViewLabelWidth = self.contentWidth;
     CGFloat commentsViewLabelHeight = 0;
-    
-    _commentsViewFrame = CGRectZero;
     
     
     for (Comment *model in self.commentsArray) {
@@ -190,7 +188,7 @@ const CGFloat margin = 8;
     
     ECLog(@"iconFrame.y: %f - nameLableFrame.y: %f - contentLabelFrame.y: %f - photoContainerViewFrame.y: %f - ",iconFrame.origin.y,nameLableFrame.origin.y,contentLabelFrame.origin.y,photoContainerViewFrame.origin.y);
     
-    return CGRectGetMaxY(commentsViewFrame) + margin * 2;
+    return MAX(CGRectGetMaxY(iconFrame), CGRectGetMaxY(commentsViewFrame)) + margin * 2;
     
 }
 
