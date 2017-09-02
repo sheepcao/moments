@@ -18,10 +18,10 @@
 {
     // 设置导航栏的主题
     UINavigationBar *navBar = [UINavigationBar appearance];
-    [navBar setBarTintColor:EC_RGBColor(200, 28, 30)];
-    NSDictionary * dict = [NSDictionary dictionaryWithObject:EC_RGBColor(230, 230, 230) forKey:NSForegroundColorAttributeName];
+    [navBar setBarTintColor:EC_RGBColor(38, 38, 42)];
+    NSDictionary * dict = [NSDictionary dictionaryWithObject:EC_RGBColor(250, 250, 250) forKey:NSForegroundColorAttributeName];
     navBar.titleTextAttributes = dict;
-    navBar.tintColor = EC_RGBColor(200, 200, 200);
+    navBar.tintColor = EC_RGBColor(230, 230, 230);
     
 }
 

@@ -31,6 +31,7 @@
 		65397DBD1F5AC0F5008C2A1D /* CommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DBC1F5AC0F5008C2A1D /* CommentsView.m */; };
 		65397DC91F5ACDA3008C2A1D /* commentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DC71F5ACDA3008C2A1D /* commentCell.m */; };
 		65397DCA1F5ACDA3008C2A1D /* commentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65397DC81F5ACDA3008C2A1D /* commentCell.xib */; };
+		65397DD01F5ADF85008C2A1D /* MomentsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DCF1F5ADF85008C2A1D /* MomentsHeaderView.m */; };
 		B0C204AB54C0413A4433051E /* libPods-ECMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */; };
 		C442FA9DCF0C53289630013F /* libPods-ECMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B0AA2D551349806C69A17 /* libPods-ECMoments.a */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,8 @@
 		65397DC61F5ACDA3008C2A1D /* commentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commentCell.h; sourceTree = "<group>"; };
 		65397DC71F5ACDA3008C2A1D /* commentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commentCell.m; sourceTree = "<group>"; };
 		65397DC81F5ACDA3008C2A1D /* commentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = commentCell.xib; sourceTree = "<group>"; };
+		65397DCE1F5ADF85008C2A1D /* MomentsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentsHeaderView.h; sourceTree = "<group>"; };
+		65397DCF1F5ADF85008C2A1D /* MomentsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentsHeaderView.m; sourceTree = "<group>"; };
 		6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884FF6AF85CF6DD0FA52B7D3 /* Pods-ECMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECMomentsTests/Pods-ECMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9E82D7AB66C0C033764915 /* Pods-ECMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECMoments/Pods-ECMoments.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 			children = (
 				65397D691F585E6B008C2A1D /* ECMomentsViewController.h */,
 				65397D6A1F585E6B008C2A1D /* ECMomentsViewController.m */,
+				65397DCE1F5ADF85008C2A1D /* MomentsHeaderView.h */,
+				65397DCF1F5ADF85008C2A1D /* MomentsHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -581,6 +586,7 @@
 				65397D7A1F5862CD008C2A1D /* UIView+FrameHelper.m in Sources */,
 				65397D981F5993AE008C2A1D /* JSONHelper.m in Sources */,
 				65397DBD1F5AC0F5008C2A1D /* CommentsView.m in Sources */,
+				65397DD01F5ADF85008C2A1D /* MomentsHeaderView.m in Sources */,
 				65397D731F586147008C2A1D /* ECNavController.m in Sources */,
 				65397DAA1F5A4DD8008C2A1D /* TweetViewModel.m in Sources */,
 				65397DA41F5A4AA7008C2A1D /* UserProfile.m in Sources */,
