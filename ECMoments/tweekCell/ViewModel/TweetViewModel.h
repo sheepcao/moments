@@ -11,6 +11,7 @@
 
 typedef NS_ENUM(NSInteger,LabelStatus)
 {
+    LabelStatusNotSet,
     LabelStatusNoNeedExtend,
     LabelStatusFold,
     LabelStatusUnfold
@@ -29,7 +30,7 @@ typedef NS_ENUM(NSInteger,LabelStatus)
 @property (nonatomic, strong) NSArray *commentsArray;
 @property (nonatomic, strong) NSString *errorMessage;
 
-@property LabelStatus labelStatus;
+@property (nonatomic) LabelStatus labelStatus;
 @property (nonatomic, assign) CGFloat cellHeight;
 
 
@@ -38,9 +39,9 @@ typedef NS_ENUM(NSInteger,LabelStatus)
 @property (nonatomic) CGRect iconFrame;
 @property (nonatomic) CGRect nameLableFrame;
 @property (nonatomic) CGRect contentLabelFrame;
-@property (nonatomic) CGRect moreButtonFrame;
+@property (nonatomic) CGFloat moreButtonHeight;
 @property (nonatomic) CGRect photoContainerViewFrame;
-@property (nonatomic) CGRect originalViewFrame;
+@property (nonatomic) CGFloat photoWidth;
 
 
 

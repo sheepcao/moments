@@ -24,6 +24,10 @@
 		65397DA71F5A4D68008C2A1D /* MomentsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DA61F5A4D68008C2A1D /* MomentsViewModel.m */; };
 		65397DAA1F5A4DD8008C2A1D /* TweetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DA91F5A4DD8008C2A1D /* TweetViewModel.m */; };
 		65397DAD1F5A830E008C2A1D /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DAC1F5A830E008C2A1D /* NSString+Helper.m */; };
+		65397DB01F5A9B0F008C2A1D /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DAF1F5A9B0F008C2A1D /* TweetCell.m */; };
+		65397DB31F5A9B3B008C2A1D /* MessageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DB21F5A9B3B008C2A1D /* MessageContentView.m */; };
+		65397DB61F5A9B49008C2A1D /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DB51F5A9B49008C2A1D /* PhotosView.m */; };
+		65397DBA1F5AA07D008C2A1D /* ECFoldButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DB91F5AA07D008C2A1D /* ECFoldButton.m */; };
 		B0C204AB54C0413A4433051E /* libPods-ECMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */; };
 		C442FA9DCF0C53289630013F /* libPods-ECMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B0AA2D551349806C69A17 /* libPods-ECMoments.a */; };
 /* End PBXBuildFile section */
@@ -76,6 +80,14 @@
 		65397DA91F5A4DD8008C2A1D /* TweetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewModel.m; sourceTree = "<group>"; };
 		65397DAB1F5A830E008C2A1D /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		65397DAC1F5A830E008C2A1D /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		65397DAE1F5A9B0F008C2A1D /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
+		65397DAF1F5A9B0F008C2A1D /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
+		65397DB11F5A9B3B008C2A1D /* MessageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageContentView.h; sourceTree = "<group>"; };
+		65397DB21F5A9B3B008C2A1D /* MessageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageContentView.m; sourceTree = "<group>"; };
+		65397DB41F5A9B49008C2A1D /* PhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosView.h; sourceTree = "<group>"; };
+		65397DB51F5A9B49008C2A1D /* PhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosView.m; sourceTree = "<group>"; };
+		65397DB81F5AA07D008C2A1D /* ECFoldButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECFoldButton.h; sourceTree = "<group>"; };
+		65397DB91F5AA07D008C2A1D /* ECFoldButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECFoldButton.m; sourceTree = "<group>"; };
 		6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884FF6AF85CF6DD0FA52B7D3 /* Pods-ECMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECMomentsTests/Pods-ECMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9E82D7AB66C0C033764915 /* Pods-ECMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECMoments/Pods-ECMoments.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +222,7 @@
 		65397D331F585AF7008C2A1D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				65397DB71F5AA060008C2A1D /* ECFoldButton */,
 				65397D771F58628E008C2A1D /* ECImageView */,
 				65397D761F586283008C2A1D /* UIViewFrame */,
 				65397D6D1F586126008C2A1D /* ECNavController */,
@@ -276,6 +289,12 @@
 		65397D571F585CF0008C2A1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				65397DAE1F5A9B0F008C2A1D /* TweetCell.h */,
+				65397DAF1F5A9B0F008C2A1D /* TweetCell.m */,
+				65397DB11F5A9B3B008C2A1D /* MessageContentView.h */,
+				65397DB21F5A9B3B008C2A1D /* MessageContentView.m */,
+				65397DB41F5A9B49008C2A1D /* PhotosView.h */,
+				65397DB51F5A9B49008C2A1D /* PhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +333,15 @@
 				65397D9D1F59A701008C2A1D /* ECImageView.m */,
 			);
 			path = ECImageView;
+			sourceTree = "<group>";
+		};
+		65397DB71F5AA060008C2A1D /* ECFoldButton */ = {
+			isa = PBXGroup;
+			children = (
+				65397DB81F5AA07D008C2A1D /* ECFoldButton.h */,
+				65397DB91F5AA07D008C2A1D /* ECFoldButton.m */,
+			);
+			path = ECFoldButton;
 			sourceTree = "<group>";
 		};
 		95407647EBF1E362F5E0AC5F /* Frameworks */ = {
@@ -527,11 +555,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				65397D9E1F59A701008C2A1D /* ECImageView.m in Sources */,
+				65397DB31F5A9B3B008C2A1D /* MessageContentView.m in Sources */,
 				65397D7A1F5862CD008C2A1D /* UIView+FrameHelper.m in Sources */,
 				65397D981F5993AE008C2A1D /* JSONHelper.m in Sources */,
 				65397D731F586147008C2A1D /* ECNavController.m in Sources */,
 				65397DAA1F5A4DD8008C2A1D /* TweetViewModel.m in Sources */,
 				65397DA41F5A4AA7008C2A1D /* UserProfile.m in Sources */,
+				65397DBA1F5AA07D008C2A1D /* ECFoldButton.m in Sources */,
 				65397D821F590AED008C2A1D /* MomentsAPIClient.m in Sources */,
 				65397D0A1F5856DA008C2A1D /* AppDelegate.m in Sources */,
 				65397DA71F5A4D68008C2A1D /* MomentsViewModel.m in Sources */,
@@ -539,6 +569,8 @@
 				65397D071F5856DA008C2A1D /* main.m in Sources */,
 				65397DAD1F5A830E008C2A1D /* NSString+Helper.m in Sources */,
 				65397D6B1F585E6B008C2A1D /* ECMomentsViewController.m in Sources */,
+				65397DB01F5A9B0F008C2A1D /* TweetCell.m in Sources */,
+				65397DB61F5A9B49008C2A1D /* PhotosView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,12 +11,12 @@
 
 @interface TweetViewModel ()
 {
-    CGRect lastIconFrame;
-    CGRect lastNameLableFrame;
-    CGRect lastContentLabelFrame;
-    CGRect lastMoreButtonFrame;
-    CGRect lastPhotoContainerViewFrame;
-    CGRect lastOriginalViewFrame;
+//    CGRect lastIconFrame;
+//    CGRect lastNameLableFrame;
+//    CGRect lastContentLabelFrame;
+//    CGRect lastMoreButtonFrame;
+//    CGRect lastPhotoContainerViewFrame;
+//    CGRect lastOriginalViewFrame;
 }
 @property CGFloat labelFoldHeight;
 
@@ -39,24 +39,36 @@ const CGFloat margin = 8;
         self.commentsArray = self.tweet.comments;
         self.errorMessage = self.tweet.error ? self.tweet.error : self.tweet.unknownError;
         
-        self.textfont = [UIFont systemFontOfSize:12.5f];
-        self.labelFoldHeight = self.textfont.lineHeight * 4;
+        self.textfont = [UIFont systemFontOfSize:14.5f];
+        self.labelFoldHeight = 60;
         
-        self.labelStatus = LabelStatusNoNeedExtend;
+        self.labelStatus = LabelStatusNotSet;
         
-        lastIconFrame = CGRectZero;
-        lastNameLableFrame = CGRectZero;
-        lastContentLabelFrame = CGRectZero;
-        lastMoreButtonFrame = CGRectZero;
-        lastPhotoContainerViewFrame = CGRectZero;
-        lastOriginalViewFrame = CGRectZero;
         
         
     }
     return self;
 }
 
+-(LabelStatus) labelStatus
+{
+    if (_labelStatus == LabelStatusNotSet) {
+        CGFloat contentLabelWidth = self.contentWidth - 2 * margin;
+        CGFloat textHeight = [self heightFitContentMessage:self.contentString InWidth:contentLabelWidth];
+        if (textHeight <= self.labelFoldHeight) {
+            _labelStatus = LabelStatusNoNeedExtend;
+        }else
+        {
+            _labelStatus = LabelStatusFold;
+        }
+    }
+    return _labelStatus;
+}
 
+-(CGFloat)moreButtonHeight
+{
+    return 20 + margin *2;
+}
 
 -(CGRect)iconFrame
 {
@@ -87,13 +99,20 @@ const CGFloat margin = 8;
     
     
     // set some flag
-    if (textHeight > self.labelFoldHeight) {
-        contentLabelHeight = (self.labelStatus == LabelStatusUnfold) ? textHeight : self.labelFoldHeight;
-    } else {
-        self.labelStatus = LabelStatusNoNeedExtend;
-        contentLabelHeight = self.labelFoldHeight;
+    switch (self.labelStatus) {
+        case LabelStatusUnfold:
+            contentLabelHeight = textHeight + self.moreButtonHeight;
+            break;
+        case LabelStatusFold:
+            contentLabelHeight = self.labelFoldHeight + self.moreButtonHeight;
+            break;
+        case LabelStatusNoNeedExtend:
+            contentLabelHeight = textHeight;
+            break;
+        default:
+            break;
     }
-    _contentLabelFrame = CGRectMake(contentLabelX, contentLabelY,contentLabelWidth , contentLabelHeight);
+        _contentLabelFrame = CGRectMake(contentLabelX, contentLabelY,contentLabelWidth , contentLabelHeight);
     
     
     return _contentLabelFrame;
@@ -106,26 +125,29 @@ const CGFloat margin = 8;
     CGFloat photoContainerLabelWidth = _contentLabelFrame.size.width;
     CGFloat photoContainerLabelHeight = 0;
     
-    NSInteger count = self.picNamesArray.count;
     _photoContainerViewFrame = CGRectZero;
+    NSInteger count = self.picNamesArray.count;
+
     if (count > 0) {
         
         
         CGFloat photoMargin = 3;
-        CGFloat photoWidth = 0;
+        self.photoWidth = 0;
         if (count == 1) {
-            photoWidth = photoContainerLabelWidth/2;
+            self.photoWidth = photoContainerLabelWidth/2;
         }else
         {
-            photoWidth = (photoContainerLabelWidth - photoMargin * 4)/3;
+            self.photoWidth = (photoContainerLabelWidth - photoMargin * 4)/3;
         }
-        photoContainerLabelHeight = photoWidth*((count - 1)/3 + 1) + 2 * photoMargin;
+        photoContainerLabelHeight = (self.photoWidth + photoMargin)*((count - 1)/3 + 1) + 4 * photoMargin;
         _photoContainerViewFrame = CGRectMake(photoContainerLabelX, photoContainerLabelY, photoContainerLabelWidth, photoContainerLabelHeight);
     }
     
     return _photoContainerViewFrame;
     
 }
+
+
 
 -(CGFloat)contentWidth
 {
@@ -150,6 +172,8 @@ const CGFloat margin = 8;
     return CGRectGetMaxY(photoContainerViewFrame);
     
 }
+
+
 
 
 
