@@ -18,7 +18,7 @@
 @end
 
 @interface Comment : NSObject
-@property (nonatomic,strong) NSString *content;
+@property (nonatomic,strong) NSString *commentMsg;
 @property (nonatomic,strong) ContentSender *sender;
 @end
 

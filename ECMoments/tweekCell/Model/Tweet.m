@@ -29,7 +29,10 @@
 @end
 
 @implementation Comment
-
++ (NSDictionary *)modelCustomPropertyMapper {
+    NSDictionary *dic=@{@"commentMsg":@"content"};
+    return dic;
+}
 @end
 
 @implementation ContentSender

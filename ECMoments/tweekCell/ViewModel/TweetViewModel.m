@@ -11,12 +11,12 @@
 
 @interface TweetViewModel ()
 {
-//    CGRect lastIconFrame;
-//    CGRect lastNameLableFrame;
-//    CGRect lastContentLabelFrame;
-//    CGRect lastMoreButtonFrame;
-//    CGRect lastPhotoContainerViewFrame;
-//    CGRect lastOriginalViewFrame;
+    //    CGRect lastIconFrame;
+    //    CGRect lastNameLableFrame;
+    //    CGRect lastContentLabelFrame;
+    //    CGRect lastMoreButtonFrame;
+    //    CGRect lastPhotoContainerViewFrame;
+    //    CGRect lastOriginalViewFrame;
 }
 @property CGFloat labelFoldHeight;
 
@@ -112,7 +112,7 @@ const CGFloat margin = 8;
         default:
             break;
     }
-        _contentLabelFrame = CGRectMake(contentLabelX, contentLabelY,contentLabelWidth , contentLabelHeight);
+    _contentLabelFrame = CGRectMake(contentLabelX, contentLabelY,contentLabelWidth , contentLabelHeight);
     
     
     return _contentLabelFrame;
@@ -127,7 +127,7 @@ const CGFloat margin = 8;
     
     _photoContainerViewFrame = CGRectZero;
     NSInteger count = self.picNamesArray.count;
-
+    
     if (count > 0) {
         
         
@@ -147,6 +147,26 @@ const CGFloat margin = 8;
     
 }
 
+-(CGRect)commentsViewFrame
+{
+    CGFloat commentsViewLabelX = _nameLableFrame.origin.x;
+    CGFloat commentsViewLabelY = CGRectGetMaxY(_photoContainerViewFrame) + margin * 0.5;
+    CGFloat commentsViewLabelWidth = self.contentWidth;
+    CGFloat commentsViewLabelHeight = 0;
+    
+    _commentsViewFrame = CGRectZero;
+    
+    
+    for (Comment *model in self.commentsArray) {
+        NSString *wholeComment = [[model.sender.nick stringByAppendingString:@": "] stringByAppendingString:model.commentMsg];
+        commentsViewLabelHeight += ([self heightFitContentMessage:wholeComment InWidth:commentsViewLabelWidth] + 6);
+    }
+    
+    _commentsViewFrame = CGRectMake(commentsViewLabelX, commentsViewLabelY, commentsViewLabelWidth, commentsViewLabelHeight);
+    
+    return _commentsViewFrame;
+    
+}
 
 
 -(CGFloat)contentWidth
@@ -166,10 +186,11 @@ const CGFloat margin = 8;
     CGRect nameLableFrame = self.nameLableFrame;
     CGRect contentLabelFrame = self.contentLabelFrame;
     CGRect photoContainerViewFrame = self.photoContainerViewFrame;
+    CGRect commentsViewFrame = self.commentsViewFrame;
     
-    ECLog(@"iconFrame.y: %f - nameLableFrame.y: %f - contentLabelFrame.y: %f - photoContainerViewFrame.y: %f",iconFrame.origin.y,nameLableFrame.origin.y,contentLabelFrame.origin.y,photoContainerViewFrame.origin.y);
+    ECLog(@"iconFrame.y: %f - nameLableFrame.y: %f - contentLabelFrame.y: %f - photoContainerViewFrame.y: %f - ",iconFrame.origin.y,nameLableFrame.origin.y,contentLabelFrame.origin.y,photoContainerViewFrame.origin.y);
     
-    return CGRectGetMaxY(photoContainerViewFrame);
+    return CGRectGetMaxY(commentsViewFrame) + margin * 2;
     
 }
 

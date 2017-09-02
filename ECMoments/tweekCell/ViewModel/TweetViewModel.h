@@ -42,6 +42,8 @@ typedef NS_ENUM(NSInteger,LabelStatus)
 @property (nonatomic) CGFloat moreButtonHeight;
 @property (nonatomic) CGRect photoContainerViewFrame;
 @property (nonatomic) CGFloat photoWidth;
+@property (nonatomic) CGRect commentsViewFrame;
+
 
 
 

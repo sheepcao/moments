@@ -34,11 +34,15 @@
     self.nameLabel = [[UILabel alloc] init];
     self.messageContentView = [[MessageContentView alloc] init];
     self.photosView = [[PhotosView alloc] init];
+    self.commentsView = [[CommentsView alloc] init];
+
     
     [self addSubview:self.avatarImageView];
     [self addSubview:self.nameLabel];
     [self addSubview:self.messageContentView];
     [self addSubview:self.photosView];
+    [self addSubview:self.commentsView];
+
 
 }
 
@@ -53,6 +57,7 @@
     
     [self.messageContentView updateContent:viewModel];
     [self.photosView updateContent:viewModel];
+    [self.commentsView updateContent:viewModel];
     
 }
 

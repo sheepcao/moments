@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MessageContentView.h"
 #import "PhotosView.h"
+#import "CommentsView.h"
 
 @interface TweetCell : UITableViewCell
 
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) MessageContentView *messageContentView;
 
 @property (nonatomic, strong) PhotosView *photosView;
+@property (nonatomic, strong) CommentsView *commentsView;
+
 
 -(void)setupWithViewModel:(TweetViewModel *)viewModel;
 @end
