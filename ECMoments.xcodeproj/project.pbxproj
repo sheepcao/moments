@@ -23,6 +23,7 @@
 		65397DA41F5A4AA7008C2A1D /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DA31F5A4AA7008C2A1D /* UserProfile.m */; };
 		65397DA71F5A4D68008C2A1D /* MomentsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DA61F5A4D68008C2A1D /* MomentsViewModel.m */; };
 		65397DAA1F5A4DD8008C2A1D /* TweetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DA91F5A4DD8008C2A1D /* TweetViewModel.m */; };
+		65397DAD1F5A830E008C2A1D /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65397DAC1F5A830E008C2A1D /* NSString+Helper.m */; };
 		B0C204AB54C0413A4433051E /* libPods-ECMomentsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */; };
 		C442FA9DCF0C53289630013F /* libPods-ECMoments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B0AA2D551349806C69A17 /* libPods-ECMoments.a */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,8 @@
 		65397DA61F5A4D68008C2A1D /* MomentsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentsViewModel.m; sourceTree = "<group>"; };
 		65397DA81F5A4DD8008C2A1D /* TweetViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetViewModel.h; sourceTree = "<group>"; };
 		65397DA91F5A4DD8008C2A1D /* TweetViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetViewModel.m; sourceTree = "<group>"; };
+		65397DAB1F5A830E008C2A1D /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		65397DAC1F5A830E008C2A1D /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		6B51E1A54076FC9B29337F9C /* libPods-ECMomentsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ECMomentsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884FF6AF85CF6DD0FA52B7D3 /* Pods-ECMomentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMomentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECMomentsTests/Pods-ECMomentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9E82D7AB66C0C033764915 /* Pods-ECMoments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECMoments.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECMoments/Pods-ECMoments.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				65397D6C1F586072008C2A1D /* ECMacro.h */,
+				65397DAB1F5A830E008C2A1D /* NSString+Helper.h */,
+				65397DAC1F5A830E008C2A1D /* NSString+Helper.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 				65397DA71F5A4D68008C2A1D /* MomentsViewModel.m in Sources */,
 				65397D7F1F5907D3008C2A1D /* Tweet.m in Sources */,
 				65397D071F5856DA008C2A1D /* main.m in Sources */,
+				65397DAD1F5A830E008C2A1D /* NSString+Helper.m in Sources */,
 				65397D6B1F585E6B008C2A1D /* ECMomentsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,10 @@
 #define ECLog(...)
 #endif
 
+/** device size */
+#define ECSCREEN_W [UIScreen mainScreen].bounds.size.width
+#define ECSCREEN_H [UIScreen mainScreen].bounds.size.height
+
 /** color */
 
 #define EC_RGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]

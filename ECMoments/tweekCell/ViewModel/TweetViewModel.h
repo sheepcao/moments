@@ -32,6 +32,18 @@ typedef NS_ENUM(NSInteger,LabelStatus)
 @property LabelStatus labelStatus;
 @property (nonatomic, assign) CGFloat cellHeight;
 
+
+@property (nonatomic, strong) UIFont *textfont;
+
+@property (nonatomic) CGRect iconFrame;
+@property (nonatomic) CGRect nameLableFrame;
+@property (nonatomic) CGRect contentLabelFrame;
+@property (nonatomic) CGRect moreButtonFrame;
+@property (nonatomic) CGRect photoContainerViewFrame;
+@property (nonatomic) CGRect originalViewFrame;
+
+
+
 - (instancetype)initWithTweet:(Tweet *)tweet;
 
 
