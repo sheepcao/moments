@@ -47,6 +47,7 @@
     if (self = [super initWithFrame:frame]) {
         
         self.backgroundColor = [UIColor whiteColor];
+        [self observeOrientation];
         
     }
     return self;
@@ -107,5 +108,51 @@
     [self addSubview:self.nameLabel];
     
 }
+
+-(void)observeOrientation
+{
+    if (![UIDevice currentDevice].generatesDeviceOrientationNotifications) {
+        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    }
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleDeviceOrientationChange:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+    
+    
+}
+//设备方向改变的处理
+- (void)handleDeviceOrientationChange:(NSNotification *)notification{
+    
+//    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    
+    self.nameLabel.width = 200;
+    self.nameLabel.height = 20;
+    self.nameLabel.x = self.width - self.nameLabel.width - 110;
+    self.nameLabel.y = self.height - 20 - 20 - 6;
+    
+    self.avatarView.x = self.width - 100;
+    self.avatarView.y = self.height - 70;
+    self.avatarView.width = 70;
+    self.avatarView.height = 70;
+
+    CGFloat ratio = self.profileImageView.image.size.width/self.profileImageView.image.size.height;
+    self.profileImageView.width = self.width;
+    self.profileImageView.height = self.width / ratio;
+    
+    self.profileImageView.x = 0;
+    self.profileImageView.y = MIN(0, self.height - self.profileImageView.height - 20);
+
+    
+    
+}
+//最后在dealloc中移除通知 和结束设备旋转的通知
+- (void)dealloc{
+    //...
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[UIDevice currentDevice]endGeneratingDeviceOrientationNotifications];
+}
+
+
 
 @end
