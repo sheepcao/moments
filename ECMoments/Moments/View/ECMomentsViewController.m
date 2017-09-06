@@ -38,8 +38,14 @@ static NSString * const CellIdentifier = @"TweetCell";
     [self setupTableView];
     [self addRefresher];
     
+    //TODO:   only happpy flow at present, no error handling.
     [self.momentsViewModel loadUserProfileWithBlock:^(NSError *error, UserProfile *profile) {
         ECStrongSelf(strongSelf);
+        if (error)
+        {
+            ECLog(@"Network error %@",error);
+            return ;
+        }
         [strongSelf setupHeadViewWithProfile:profile];
         
     }];
@@ -105,7 +111,7 @@ static NSString * const CellIdentifier = @"TweetCell";
     ECWeakSelf(weakSelf);
     [self.momentsViewModel loadTweetsWithCount:5 WithBlock:^(NSError *error) {
         ECStrongSelf(strongSelf);
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             [strongSelf.tableview reloadData];
             [strongSelf.tableview.mj_header endRefreshing];
@@ -134,7 +140,7 @@ static NSString * const CellIdentifier = @"TweetCell";
     [self.momentsViewModel loadTweetsWithCount:amount WithBlock:^(NSError *error) {
         ECStrongSelf(strongSelf);
         ECLog(@"reloadData - %lu",amount);
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             [strongSelf.tableview reloadData];
             ECLog(@"endRefreshing - %lu",amount);

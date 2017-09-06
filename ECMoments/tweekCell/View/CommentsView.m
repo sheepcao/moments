@@ -28,6 +28,7 @@ static NSString * const CellIdentifier = @"commentCellIdentifier";
 - (void)setupUI
 {
     self.userInteractionEnabled = NO;
+    self.backgroundColor = EC_RGBColor(236, 236, 236);
 
     
 //    [self registerClass:[commentCell class] forCellReuseIdentifier:CellIdentifier];
@@ -39,7 +40,7 @@ static NSString * const CellIdentifier = @"commentCellIdentifier";
     self.estimatedRowHeight = 30;
     self.rowHeight = UITableViewAutomaticDimension;
 
-    self.backgroundColor = [UIColor clearColor];
+//    self.backgroundColor = [UIColor clearColor];
 }
 
 
